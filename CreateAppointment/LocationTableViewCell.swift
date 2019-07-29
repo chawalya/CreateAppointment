@@ -9,7 +9,8 @@
 import UIKit
 
 class LocationTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var myLocationNameLabel: UILabel!
+    @IBOutlet weak var myLocationLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,6 +20,11 @@ class LocationTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func configureLocationCell(locationName: String, location: String) {
+    self.myLocationNameLabel.text = locationName
+    self.myLocationLabel.text = location
     }
 
 }

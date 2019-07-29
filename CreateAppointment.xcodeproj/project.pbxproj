@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E19043C22E886D600D1B03B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E19043B22E886D600D1B03B /* Location.swift */; };
+		2E19043F22E88A3C00D1B03B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E19043E22E88A3C00D1B03B /* MapKit.framework */; };
+		2E19044122E9EBAE00D1B03B /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E19044022E9EBAE00D1B03B /* LocationTableViewCell.swift */; };
 		F9FF498E22E166F000967C3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF498D22E166F000967C3C /* AppDelegate.swift */; };
 		F9FF499022E166F000967C3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FF498F22E166F000967C3C /* ViewController.swift */; };
 		F9FF499322E166F000967C3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9FF499122E166F000967C3C /* Main.storyboard */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E19043B22E886D600D1B03B /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		2E19043E22E88A3C00D1B03B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		2E19044022E9EBAE00D1B03B /* LocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
 		F9FF498A22E166F000967C3C /* CreateAppointment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreateAppointment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9FF498D22E166F000967C3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9FF498F22E166F000967C3C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +35,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E19043F22E88A3C00D1B03B /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E19043D22E88A3C00D1B03B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E19043E22E88A3C00D1B03B /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F9FF498122E166F000967C3C = {
 			isa = PBXGroup;
 			children = (
 				F9FF498C22E166F000967C3C /* CreateAppointment */,
 				F9FF498B22E166F000967C3C /* Products */,
+				2E19043D22E88A3C00D1B03B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +76,8 @@
 				F9FF499422E166F100967C3C /* Assets.xcassets */,
 				F9FF499622E166F100967C3C /* LaunchScreen.storyboard */,
 				F9FF499922E166F100967C3C /* Info.plist */,
+				2E19043B22E886D600D1B03B /* Location.swift */,
+				2E19044022E9EBAE00D1B03B /* LocationTableViewCell.swift */,
 			);
 			path = CreateAppointment;
 			sourceTree = "<group>";
@@ -96,6 +114,11 @@
 				TargetAttributes = {
 					F9FF498922E166F000967C3C = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -136,6 +159,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9FF499022E166F000967C3C /* ViewController.swift in Sources */,
+				2E19043C22E886D600D1B03B /* Location.swift in Sources */,
+				2E19044122E9EBAE00D1B03B /* LocationTableViewCell.swift in Sources */,
 				F9FF498E22E166F000967C3C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +308,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = APLQ85S5UL;
 				INFOPLIST_FILE = CreateAppointment/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -300,6 +326,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = APLQ85S5UL;
 				INFOPLIST_FILE = CreateAppointment/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
